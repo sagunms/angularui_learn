@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular UI</title>
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	</head>
+	<body ng-app="MyApp">
+		<div ng-controller="MainController">
+			<accordion>
+				<accordion-group heading="First Heading">
+					This is the content for the first heading
+				</accordion-group>
+				<accordion-group heading="Second Heading">
+					This is the content for the second heading
+				</accordion-group>
+				<accordion-group ng-repeat="s in sections" heading="{{s.heading}}">
+					{{s.content}}
+				</accordion-group>
+			</accordion>
+
+		</div>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

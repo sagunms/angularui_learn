@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular UI</title>
+		<style>
+			.map {
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body> <!-- Note we will bootstrap ng-app="MyApp" onGoogleReady() in app.js -->
+		<div ng-controller="MainController">
+			<div class="map" ui-map="MyMap" ui-options="mapOptions" ui-event="{ 'map-click': 'addMarker($event, $params)' }"></div>
+		</div>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular-ui-utils/ui-utils.min.js"></script>
+		<script src="lib/angular-ui-map/ui-map.min.js"></script>
+		<script src="app.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady"></script>
+	</body>
+</html>

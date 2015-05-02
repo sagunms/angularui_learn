@@ -1,0 +1,16 @@
+{
+  "name": "highlighting",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sagun Man Singh Shrestha <sagun@blackswansolutions.com.au>",
+  "license": "MIT"
+}

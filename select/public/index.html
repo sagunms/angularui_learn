@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular UI</title>
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="lib/angular-ui-select/dist/select.min.css">
+	</head>
+	<body ng-app="MyApp">
+		<div ng-controller="MainController">
+			<ui-select ng-model="employee.selected" theme="bootstrap" reset-search-input="false">
+				<ui-select-match placeholder="Enter a name...">
+					<strong>{{$select.selected.name}}</strong> is really cool!
+				</ui-select-match>
+				<ui-select-choices repeat="e in employees | filter: $select.search">
+					{{e.name}} &lt;{{e.email}}&gt;
+				</ui-select-choices>
+			</ui-select>
+		</div>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular-ui-select/dist/select.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

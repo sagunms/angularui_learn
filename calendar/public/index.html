@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular UI</title>
+		<link rel="stylesheet" href="lib/fullcalendar/fullcalendar.css">
+		<style>
+			.calendar {
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body ng-app="MyApp">
+		<div ng-controller="MainController">
+			<div class="calendar" ui-calendar="calOptions" ng-model="eventSources"></div>
+		</div>
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script src="lib/jquery-ui/ui/jquery-ui.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/fullcalendar/fullcalendar.js"></script>
+		<script src="lib/angular-ui-calendar/src/calendar.js"></script>
+		<script src="lib/angular-ui-utils/ui-utils.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
